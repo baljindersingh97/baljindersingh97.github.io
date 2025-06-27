@@ -1,20 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Baljinder Singh | Software Engineer</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #333; }
-    header { background: #333; color: #fff; padding: 30px 20px; text-align: center; }
-    section { padding: 30px 20px; max-width: 900px; margin: auto; }
-    h1, h2 { color: #222; }
-    ul { list-style: none; padding: 0; }
-    li { margin: 10px 0; }
-    a { color: #0077cc; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .project { margin-bottom: 20px; }
-    footer { text-align: center; padding: 20px; background: #eee; }
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: #1a1a1a;
+      color: #eee;
+    }
+    header {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      padding: 60px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+    nav {
+      background: #111;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #00bcd4;
+    }
+    main {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 60px;
+    }
+    h2 {
+      color: #00bcd4;
+      border-bottom: 2px solid #00bcd4;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 15px;
+    }
+    .skill {
+      background: #2a2a2a;
+      padding: 10px;
+      text-align: center;
+      border-radius: 5px;
+    }
+    .project {
+      background: #2c2c2c;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+    .project h3 {
+      margin-top: 0;
+    }
+    .project a {
+      color: #00bcd4;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      font-size: 14px;
+      color: #aaa;
+    }
   </style>
 </head>
 <body>
@@ -22,50 +92,53 @@
     <h1>Baljinder Singh</h1>
     <p>Software Engineer</p>
   </header>
-
-  <section>
-    <h2>About Me</h2>
-    <p>I'm Baljinder Singh, a passionate Software Engineer dedicated to building efficient, scalable, and user-friendly solutions. With experience in full-stack development, I enjoy solving complex problems through code and continuously learning new technologies to stay ahead in the tech world.</p>
-  </section>
-
-  <section>
-    <h2>Skills</h2>
-    <ul>
-      <li>Python</li>
-      <li>Java</li>
-      <li>C++</li>
-      <li>HTML & CSS</li>
-      <li>JavaScript</li>
-      <li>SQL</li>
-      <li>Git & GitHub</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Reddit Sentiment Analyzer</h3>
-      <p>A Python-based project that analyzes Reddit comments using sentiment analysis. It uses APIs and NLP libraries like TextBlob and visualizes results using Matplotlib.</p>
-      <a href="https://github.com/baljindersingh97/reddit-sentiment-analyzer" target="_blank">GitHub</a>
-    </div>
-    <div class="project">
-      <h3>Task Manager CLI Tool</h3>
-      <p>A command-line task management tool built in Python. Supports adding, deleting, and sorting tasks with multithreading for performance.</p>
-      <a href="https://github.com/baljindersingh97/task-manager-cli" target="_blank">GitHub</a>
-    </div>
-    <div class="project">
-      <h3>Portfolio Website</h3>
-      <p>A fully responsive personal portfolio website to showcase skills, projects, and contact information.</p>
-      <a href="https://github.com/baljindersingh97" target="_blank">GitHub</a>
-    </div>
-  </section>
-
-  <section>
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:baljindersingh969727@gmail.com">baljindersingh969727@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/baljindersingh97" target="_blank">baljindersingh97</a></p>
-  </section>
-
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I'm Baljinder Singh, a passionate Software Engineer dedicated to building efficient, scalable, and user-friendly solutions. With experience in full-stack development, I enjoy solving complex problems through code and continuously learning new technologies to stay ahead in the tech world.</p>
+    </section>
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill">Python</div>
+        <div class="skill">Java</div>
+        <div class="skill">C++</div>
+        <div class="skill">HTML & CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">SQL</div>
+        <div class="skill">Git & GitHub</div>
+      </div>
+    </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Student Record System</h3>
+        <p>A Python-based application to manage student records, including adding, searching, and deleting entries using file handling.</p>
+        <a href="https://github.com/baljindersingh97" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project">
+        <h3>Weather App</h3>
+        <p>A simple Python web app that fetches and displays real-time weather data using a public API and presents it with a clean UI.</p>
+        <a href="https://github.com/baljindersingh97" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>A fully responsive personal portfolio website to showcase skills, projects, and contact information.</p>
+        <a href="https://github.com/baljindersingh97" target="_blank">View on GitHub</a>
+      </div>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:baljindersingh969727@gmail.com">baljindersingh969727@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/baljindersingh97" target="_blank">baljindersingh97</a></p>
+    </section>
+  </main>
   <footer>
     <p>&copy; 2025 Baljinder Singh. All rights reserved.</p>
   </footer>
